@@ -3,7 +3,7 @@ var logger = require('tracer').colorConsole();
 
 module.exports.parseResume = function(inputFile, outputDir) {
   return new Promise((resolve, reject) => {
-    parseIt.parseResume(inputFile, outputDir, function(file, error) {
+    parseIt.parseResumeFile(inputFile, outputDir, function(file, error) {
       if (error) {
         return reject(error);
       }

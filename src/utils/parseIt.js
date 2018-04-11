@@ -16,8 +16,9 @@ var parser = {
         logger.trace(
           'I got Resume for ' + preppedFile.name + ', now saving...'
         );
-
-        objParseBoy.storeResume(preppedFile, Resume, savePath, function(err) {
+        preppedFile.addResume(Resume);
+        return cbAfterParse(preppedFile);
+        /*objParseBoy.storeResume(preppedFile, Resume, savePath, function(err) {
           if (err) {
             logger.error('Resume ' + preppedFile.name + ' errored', err);
             return cbAfterParse(
@@ -26,8 +27,8 @@ var parser = {
             );
           }
           logger.trace('Resume ' + preppedFile.name + ' saved');
-          return cbAfterParse(preppedFile.name);
-        });
+          return cbAfterParse(preppedFile);
+        });*/
       });
     };
     processing.runFile(file, onFileReady);
