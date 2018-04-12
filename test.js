@@ -5,7 +5,7 @@ ResumeParser
   .parseResume(fileDir + 'resume.pdf', fileDir + 'compiled') //input file, output dir
   .then(file => {
     console.log("Yay! " + Object.keys(file));
-    console.log(file.resume);
+    console.log(file);
   })
   .catch(error => {
     console.log('parseResume failed');
