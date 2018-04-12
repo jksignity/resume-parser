@@ -5,7 +5,7 @@ var _ = require('underscore');
 module.exports = {
   titles: {
     // objective: ['objective', 'objectives'],
-    // summary: ['summary'],
+    summary: ['summary'],
     // technology: ['technology', 'technologies'],
     experience: ['experience'],
     education: ['education'],
