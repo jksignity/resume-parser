@@ -14,9 +14,9 @@ Resume.prototype.addKey = function(key, value) {
   value = value.trim();
   // reject falsy values
   if (value) {
-    if (_.has(this.parts, key)) {
+    /*if (_.has(this.parts, key)) {
       value = this.parts[key] + value;
-    }
+    }*/
 
     this.parts[key] = value;
   }
